@@ -15,7 +15,7 @@ public:
         while(l1&&l2){
             if(l1->val<l2->val) tail->next=l1,l1=l1->next;
             else tail->next=l2,l2=l2->next;
-             tail=tail->next;
+             tail=tail->next;//后移一个位置用来保存下一个节点
         }
         tail->next=l1?l1:l2;
         return dummy->next;
